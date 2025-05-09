@@ -5,6 +5,8 @@ jobs:
   blah:
     runs-on: windows-2022
     steps:
+      - uses: actions/checkout@v4
       - run: |
-          cat C:\mingw64\build-info.txt
           echo $env:PATH
+          ${{github.workspace}}/ex01_Simple_Int_Param.exe
+          echo $LASTEXITCODE
