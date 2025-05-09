@@ -7,10 +7,4 @@ jobs:
     steps:
       - run: |
           cat C:\mingw64\build-info.txt
-      - uses: actions/upload-artifact@v4
-        if: success() || failure()
-        with:
-          name: test
-          path: C:\mingw64
-          retention-days: 1
-        
+          echo $env:PATH
