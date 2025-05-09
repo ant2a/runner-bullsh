@@ -10,4 +10,4 @@ jobs:
           echo $env:PATH
           ${{github.workspace}}/ex01_Simple_Int_Param.exe
           echo $LASTEXITCODE
-          "C:/Program Files/CMake/bin/cmake.exe" -DTEST_EXE="${{github.workspace}}/ex01_Simple_Int_Param.exe" -DTEST_DIR="${{github.workspace}}" -DTEST_INPUT="" -DTEST_GOLDEN="" -DTEST_FILTER="" -DDIFF_COMMAND="C:/Program Files/Git/usr/bin/diff.exe" -DDIFF_OPTIONS="-u" -P "${{github.workspace}}/run_test.cmake"
+          "C:/Program Files/CMake/bin/cmake.exe" "-DTEST_EXE=${{github.workspace}}/ex01_Simple_Int_Param.exe" "-DTEST_DIR=${{github.workspace}}" "-DTEST_INPUT=" "-DTEST_GOLDEN=" "-DTEST_FILTER=" "-DDIFF_COMMAND=C:/Program Files/Git/usr/bin/diff.exe" "-DDIFF_OPTIONS=-u" "-P" "${{github.workspace}}/run_test.cmake"
